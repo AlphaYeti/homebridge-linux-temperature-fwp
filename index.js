@@ -9,7 +9,7 @@ module.exports = function (homebridge)
   {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
-  homebridge.registerAccessory("homebridge-linux-temp-fwp", "LinuxTemperature", LinuxTemperatureAccessory);
+  homebridge.registerAccessory("homebridge-linux-temperature-fwp", "LinuxTemperature", LinuxTemperatureAccessory);
   }
 
 function LinuxTemperatureAccessory(log, config)
@@ -49,10 +49,13 @@ LinuxTemperatureAccessory.prototype =
 
     var data = fs.readFileSync('/proc/cpuinfo', 'utf8');
     if (typeof data == 'undefined') { return this.log("Failed to read /proc/cpuinfo"); }
-    var model = data.match(/model name\s+\:\s*(\S+)/)[1];
-    if ((model === undefined) || (model === null)) {
-      // FWP
+    var modelInformation = data.match(/model name\s+\:\s*(\S+)/);
+    var model = null;
+    if (modelInformation === null) {
+      // FWP doesn't have any model information
       model = 'ARM';
+    } else {
+      model = modelInformation[1]; 
     }
     informationService
       .setCharacteristic(Characteristic.Manufacturer, "Linux")
