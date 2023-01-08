@@ -1,6 +1,7 @@
-# homebridge-linux-temperature
+# homebridge-linux-temperature-fwp
 
-A homebridge temperature sensor for Linux temperatures.
+A homebridge temperature sensor for FWP Linux temperatures.
+Based on the fork by Chris Jones at https://github.com/cmsj/homebridge-linux-temperature
 Based on the fork by Peter Harry at https://github.com/GreyPeter/homebridge-pi-lm75
 Based on origial code by Mark Webb-Johnson <mark@webb-johnson.net>.
 See original code here: https://github.com/markwj/homebridge-pi
@@ -9,7 +10,7 @@ See original code here: https://github.com/markwj/homebridge-pi
 # Installation
 
 1. Install Homebridge using: `npm install -g homebridge`
-2. Install this plugin using: `npm install -g homebridge-linux-temperature`
+2. Install this plugin using: `npm install -g homebridge-linux-temperature-fwp`
 3. Update your Homebridge `config.json` using the sample below.
 
 # Configuration
