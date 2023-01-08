@@ -9,7 +9,7 @@ module.exports = function (homebridge)
   {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
-  homebridge.registerAccessory("homebridge-linux-temp", "LinuxTemperature", LinuxTemperatureAccessory);
+  homebridge.registerAccessory("homebridge-linux-temp-fwp", "LinuxTemperature", LinuxTemperatureAccessory);
   }
 
 function LinuxTemperatureAccessory(log, config)
