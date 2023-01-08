@@ -1,6 +1,6 @@
 {
   "name": "homebridge-linux-temperature-fwp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A homebridge temperature sensor for FWP Linux sensors",
   "main": "index.js",
   "scripts": {
