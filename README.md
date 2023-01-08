@@ -1,6 +1,6 @@
 # homebridge-linux-temperature-fwp
 
-A homebridge temperature sensor for FWP Linux temperatures.
+A homebridge temperature sensor for Firewalla Purple Linux temperatures.
 Based on the fork by Chris Jones at https://github.com/cmsj/homebridge-linux-temperature
 Based on the fork by Peter Harry at https://github.com/GreyPeter/homebridge-pi-lm75
 Based on origial code by Mark Webb-Johnson <mark@webb-johnson.net>.
@@ -18,8 +18,14 @@ See original code here: https://github.com/markwj/homebridge-pi
 ```json
 {
   "accessory": "LinuxTemperature",
-  "name": "Sensor Temperature",
-  "sensor_path": "/sys/bus/platform/devices/coretemp.0/hwmon/hwmon0/temp1_input",
+  "name": "Core 0 Temperature",
+  "sensor_path": "/sys/class/thermal/thermal_zone0/temp",
+  "divisor": 1000
+},
+{
+  "accessory": "LinuxTemperature",
+  "name": "Core 1 Temperature",
+  "sensor_path": "/sys/class/thermal/thermal_zone1/temp",
   "divisor": 1000
 }
 ```
