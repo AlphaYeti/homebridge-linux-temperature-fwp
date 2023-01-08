@@ -49,7 +49,7 @@ LinuxTemperatureAccessory.prototype =
 
     var data = fs.readFileSync('/proc/cpuinfo', 'utf8');
     if (typeof data == 'undefined') { return this.log("Failed to read /proc/cpuinfo"); }
-    var model = data.match(/model name\s+\:\s*(\S+)/)[1];
+    var model = 'ARM';
     informationService
       .setCharacteristic(Characteristic.Manufacturer, "Linux")
       .setCharacteristic(Characteristic.Model, model);
