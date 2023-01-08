@@ -1,14 +1,14 @@
 {
-  "name": "homebridge-linux-temperature",
-  "version": "1.0.1",
-  "description": "A homebridge temperature sensor for Linux sensors",
+  "name": "homebridge-linux-temperature-fwp",
+  "version": "1.0.2",
+  "description": "A homebridge temperature sensor for FWP Linux sensors",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cmsj/homebridge-linux-temperature/"
+    "url": "git+https://github.com/AlphaYeti/homebridge-linux-temperature-fwp/"
   },
   "engines": {
     "homebridge": ">=0.2.0",
@@ -17,12 +17,13 @@
   "keywords": [
     "homebridge-plugin",
     "temperature",
-    "linux"	
+    "linux",
+    "fwp"
   ],
-  "author": "Chris Jones",
+  "author": "Travis Harvey",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cmsj/homebridge-linux-temperature/issues"
+    "url": "https://github.com/AlphaYeti/homebridge-linux-temperature-fwp/issues"
   },
-  "homepage": "https://github.com/cmsj/homebridge-linux-temperature#readme"
+  "homepage": "https://github.com/AlphaYeti/homebridge-linux-temperature-fwp#readme"
 }
